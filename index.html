@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Minions Dashboard — Frederick Adu</title>
+<style>
+  :root { --bg:#0f172a; --card:#1e293b; --line:#334155; --txt:#e2e8f0; --mut:#94a3b8;
+          --green:#22c55e; --amber:#f59e0b; --red:#ef4444; --blue:#3b82f6; --gold:#d4af37; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--bg); color:var(--txt); font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif; padding:24px; }
+  header { text-align:center; margin-bottom:28px; }
+  header h1 { font-size:1.8rem; letter-spacing:.5px; }
+  header p { color:var(--mut); margin-top:6px; font-size:.9rem; }
+  .meta { color:var(--mut); font-size:.8rem; margin-top:8px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(330px,1fr)); gap:18px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:18px;
+          display:flex; flex-direction:column; gap:10px; transition:transform .15s ease; }
+  .card:hover { transform:translateY(-3px); border-color:var(--gold); }
+  .top { display:flex; align-items:center; justify-content:space-between; gap:8px; }
+  .top h2 { font-size:1.1rem; }
+  .pill { font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.6px;
+          padding:3px 10px; border-radius:99px; white-space:nowrap; }
+  .pill.green { background:rgba(34,197,94,.15); color:var(--green); }
+  .pill.amber { background:rgba(245,158,11,.15); color:var(--amber); }
+  .pill.blue  { background:rgba(59,130,246,.15); color:var(--blue); }
+  .pill.red   { background:rgba(239,68,68,.15); color:var(--red); }
+  .status { color:var(--mut); font-size:.85rem; line-height:1.45; }
+  .files { font-size:.75rem; color:var(--mut); border-top:1px solid var(--line); padding-top:8px; }
+  .files span { color:var(--blue); }
+  .next { font-size:.82rem; }
+  .next b { color:var(--gold); }
+  ul { padding-left:16px; display:flex; flex-direction:column; gap:3px; }
+  footer { margin-top:26px; text-align:center; color:var(--mut); font-size:.75rem; }
+</style>
+</head>
+<body>
+<header>
+  <h1>🏙️ Minions Dashboard</h1>
+  <p>All of Frederick's projects at a glance — curated by Alef, Chief of Staff</p>
+  <div class="meta">Last updated: 25 Aug 2026 · Machine: Hermes host (Linux) · Live board: <a href="http://localhost:6969" style="color:var(--blue)">localhost:6969</a></div>
+</header>
+
+<div class="grid">
+
+  <div class="card">
+    <div class="top"><h2>📱 ListenWell</h2><span class="pill amber">Building soon</span></div>
+    <div class="status">Voice-first reflection app — "the listener who helps you think." Android-first + PWA. MVP spec complete; market validated (voice lane empty).</div>
+    <div class="next"><b>Next:</b>
+      <ul>
+        <li>Google Play $25 registration (Frederick)</li>
+        <li>Repo scaffold + 90-day build plan</li>
+        <li>Launch content ready (meditation library)</li>
+      </ul>
+    </div>
+    <div class="files">📄 <span>/root/listenwell-mvp-spec.md</span> · <span>/root/listenwell-deep-dive.md</span></div>
+  </div>
+
+  <div class="card">
+    <div class="top"><h2>💍 RFA Marriage Ecosystem</h2><span class="pill green">Framework built</span></div>
+    <div class="status">App = freemium backbone → paid journeys → upsell to 1-on-1 + small groups. Master framework, Skyscraper 21-week journey, Sessions 1–4 drafted.</div>
+    <div class="next"><b>Next:</b>
+      <ul>
+        <li>Session 5 — The Faith Walk (19-element template)</li>
+        <li>Workbook + program blueprint</li>
+        <li>App tracks: Prepare / Connect / Renew</li>
+      </ul>
+    </div>
+    <div class="files">📄 <span>/root/rfa-marriage-framework.md</span> · <span>/root/skyscraper-journey-21weeks.md</span> · <span>/root/skyscraper-mentality-program.md</span></div>
+  </div>
+
+  <div class="card">
+    <div class="top"><h2>🏙️ Skyscraper Journey</h2><span class="pill green">Sessions 1–4 done</span></div>
+    <div class="status">21-week Christian mind-rewiring program (21 weeks to the 111th floor). Full 19-element session template; Sessions 3 & 4 fully drafted incl. meditations.</div>
+    <div class="next"><b>Next:</b>
+      <ul>
+        <li>Session 5 (Faith Walk) + Session 6</li>
+        <li>Elevation Covenant workbook</li>
+        <li>Program-first, book later</li>
+      </ul>
+    </div>
+    <div class="files">📄 <span>/root/skyscraper-session3-vision-reset.md</span> · <span>/root/skyscraper-session4-mind-renewal.md</span></div>
+  </div>
+
+  <div class="card">
+    <div class="top"><h2>🍽️ GoodFoodIQ</h2><span class="pill green">Launched</span></div>
+    <div class="status">Smarter food choices. Horizons 3-month focus; SEO bottom-up long-tail; content engine v2; predeploy checklist enforced.</div>
+    <div class="next"><b>Next:</b>
+      <ul>
+        <li>Content batches per engine v2</li>
+        <li>Pin production (master prompt)</li>
+        <li>GSC monitoring</li>
+      </ul>
+    </div>
+    <div class="files">📄 <span>/root/goodfoodiq-content-engine-v2.md</span> · <span>/root/goodfoodiq-predeploy-seo-checklist.md</span></div>
+  </div>
+
+  <div class="card">
+    <div class="top"><h2>🏦 Business & Payments</h2><span class="pill blue">Rail ready</span></div>
+    <div class="status">Ghana-based founder. Grey.co US account (USD rail) live; MoR route (Gumroad/Whop/Paddle) for digital products; Stripe Atlas US entity when revenue sustains.</div>
+    <div class="next"><b>Next:</b>
+      <ul>
+        <li>Step 0: sell first digital product via MoR</li>
+        <li>Stripe Atlas at ~$1–3k/mo sustained</li>
+        <li>Paystack/Flutterwave for Ghana rails</li>
+      </ul>
+    </div>
+    <div class="files">📄 <span>/root/business-entity-payments-advisory.md</span></div>
+  </div>
+
+  <div class="card">
+    <div class="top"><h2>🛠️ Research & Tools</h2><span class="pill green">38 skills live</span></div>
+    <div class="status">Agent-reach (web research) live · make-interfaces-feel-better · addyosmani ×24 · oh-my-hermes ×10 · composio · Minions board running.</div>
+    <div class="next"><b>Next:</b>
+      <ul>
+        <li>2R1 competitor watchlist (quarterly)</li>
+        <li>OHM plugin when ListenWell code starts</li>
+        <li>OpenMontage + SkillClaw parked</li>
+      </ul>
+    </div>
+    <div class="files">📄 <span>/root/2r1-competitor-teardown.md</span> · <span>/root/Agent-Reach</span> · <span>/root/OpenMontage</span> (parked)</div>
+  </div>
+
+</div>
+
+<footer>Minions Dashboard · maintained by Alef · update on request — just say "update the dashboard"</footer>
+</body>
+</html>
